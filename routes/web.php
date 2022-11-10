@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/register',[App\Http\Controllers\Auth\registerController::class,'insert']);
+Route::post('/verifEmail',[App\Http\Controllers\Auth\userController::class,'verifEmail']);

@@ -16,7 +16,7 @@ class CreateListTable extends Migration
         Schema::create('list', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_users')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('produitlist',24000);
+            $table->text('produitlist');
         });
     }
 
