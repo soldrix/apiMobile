@@ -16,5 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/register',[App\Http\Controllers\Auth\registerController::class,'insert']);
-Route::post('/verifEmail',[App\Http\Controllers\Auth\userController::class,'verifEmail']);
+//inscription
+Route::post('/register',[App\Http\Controllers\Auth\registerController::class, 'insert']);
+//verification doublon mail
+Route::post('/verifEmail',[App\Http\Controllers\Auth\userController::class, 'verifEmail']);
+
+Route::post('/login',[App\Http\Controllers\Auth\loginController::class, 'login']);
+
+Route::post('/getlist', [App\Http\Controllers\listController::class, 'getListUser']);
