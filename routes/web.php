@@ -24,3 +24,12 @@ Route::post('/verifEmail',[App\Http\Controllers\Auth\userController::class, 'ver
 Route::post('/login',[App\Http\Controllers\Auth\loginController::class, 'login']);
 
 Route::post('/getlist', [App\Http\Controllers\listController::class, 'getListUser']);
+
+Route::post('/addList',[App\Http\Controllers\listController::class,'addList']);
+
+Route::post('/addProduct',[App\Http\Controllers\listController::class,'addProduct']);
+
+Route::post('/getProduct',[App\Http\Controllers\listController::class, 'getProduct']);
+Route::post('/updateProduct',[App\Http\Controllers\listController::class, 'updateProduct']);
+Route::post('/delList',[App\Http\Controllers\listController::class, 'deleteList']);
+Route::post('/delProduct',[App\Http\Controllers\listController::class, 'deleteProduct']);
