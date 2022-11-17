@@ -15,8 +15,8 @@ class CreateProduit extends Migration
     {
         Schema::create('produit', function (Blueprint $table) {
             $table->id();
-            $table->integer('nbProduit');
             $table->string('name');
+            $table->string('status')->nullable();
             $table->foreignId('id_list')->references('id')->on('list')->onUpdate('cascade')->onDelete('cascade');
         });
     }
