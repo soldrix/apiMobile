@@ -33,3 +33,4 @@ Route::post('/getProduct',[App\Http\Controllers\listController::class, 'getProdu
 Route::post('/updateProduct',[App\Http\Controllers\listController::class, 'updateProduct']);
 Route::post('/delList',[App\Http\Controllers\listController::class, 'deleteList']);
 Route::post('/delProduct',[App\Http\Controllers\listController::class, 'deleteProduct']);
+Route::post('/logOff',[App\Http\Controllers\Auth\userController::class, 'logOff']);

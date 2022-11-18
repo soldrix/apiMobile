@@ -41,4 +41,9 @@ class userController extends Controller
         ]);
         return false;
     }
+    public function logOff(Request $request){
+        DB::table('users')->where('id',base64_decode($request->id_user))->update([
+           'token' => 'null'
+        ]);
+    }
 }
